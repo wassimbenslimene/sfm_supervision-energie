@@ -1,0 +1,65 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-buttons>
+      <button ion-button clear (click)="dismissModal()">Fermer</button>
+    </ion-buttons>
+    <ion-title>{{ appareil.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>{{ appareil.name }}</ion-card-header>
+    <ion-card-content>
+      <p *ngFor="let line of appareil.description">{{ line }}</p>
+    </ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="9">
+        </ion-col>
+        <ion-col size="3">
+          <ion-item>
+            <ion-label>Etat : ON/OFF</ion-label>
+            <ion-toggle color="secondary" checked ></ion-toggle>
+
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>-->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ appareil.name }}</ion-title>
+  <ion-buttons start>
+    <button ion-button clear (click)="dismissModal()">
+      <ion-icon  slot="icon-only" ios="ios-close" md="md-close"></ion-icon>
+    </button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card>
+    <img style="height: 20%" [src]="appareil.image" />
+    <ion-card-header>{{ appareil.name }}</ion-card-header>
+    <ion-card-content>
+      <p *ngFor="let line of appareil.description">{{ line }}</p>
+      <p>Consommation: {{ cons ? cons : '-' }} Kwh</p>
+      <p>cout: {{ dat ? dat : '-' }} DT</p>
+    </ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="9">
+        </ion-col>
+        <ion-col size="3">
+          <ion-item>
+            <ion-label>Etat : ON/OFF</ion-label>
+            <ion-toggle color="secondary" [checked]="appareil.isOn" ></ion-toggle>
+
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

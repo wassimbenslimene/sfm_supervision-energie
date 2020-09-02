@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Appareils</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="onToggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let appareil of appareilsList; let i = index">
+
+    <ion-item ion-item
+            icon-start
+              (click)="onLoadAppareil(i)">
+      <ion-row>
+        <ion-col col-11>
+          <ion-icon name="power" [color]="appareil.isOn ? 'secondary' : 'danger'"></ion-icon>
+          {{ appareil.name }}
+        </ion-col>
+        <ion-col col-1>
+          <ion-icon slot="icon-only" ios="ios-arrow-dropleft" md="md-arrow-dropleft" ></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+      <ion-item-options side="end" >
+        <ion-option color="danger" ion-button (click)="onLoadStatAppareil(i)">
+         <ion-icon slot="icon-only" name="stats" ></ion-icon>
+        </ion-option>
+        <ion-option color="primary" ion-button (click)="onLoadAppareil(i)"> details</ion-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+</ion-content>

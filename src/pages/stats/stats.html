@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>consommation totale</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="onToggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+x
+<ion-content >
+  <ion-grid>
+    <ion-row>
+      <ion-col col-5>
+        <div>
+          <P no-padding="">
+            Affichage actuel :
+          </P>
+        </div>
+      </ion-col>
+      <ion-col >
+        <div>
+          <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime (ionChange)="loadData()" displayFormat="YYYY-MM-DDHH:mm:ss" [(ngModel)]="startdate"></ion-datetime>
+          </ion-item>
+
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-5>
+        <div>
+          <P no-padding="">
+              à :
+          </P>
+        </div>
+      </ion-col>
+      <ion-col >
+        <div>
+          <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime (ionChange)="loadData()" displayFormat="YYYY-MM-DDHH:mm:ss" [(ngModel)]="enddate"></ion-datetime>
+          </ion-item>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+      <div>
+        <canvas #barChart></canvas>
+      </div>
+      <div>
+        <canvas #barChart2></canvas>
+      </div>
+</ion-content>
+
