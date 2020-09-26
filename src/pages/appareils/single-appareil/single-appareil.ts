@@ -37,6 +37,7 @@ export class SingleAppareilPage implements OnInit {
 
         this.dat == JSON.stringify(this.dat);
         this.cons == JSON.stringify(this.cons);
+        console.log(this.dat)
       },
       err => {
         // Set the error information to display in the template

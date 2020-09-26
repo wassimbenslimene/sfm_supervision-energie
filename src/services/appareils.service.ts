@@ -12,7 +12,7 @@ export class AppareilsService {
 
   }
   getRemotedata(){
-    return this.http.get("http://localhost:8003?devices=true");
+    return this.http.get("http://localhost:8003?devices=true")
   }
 
   appareilsList: Appareil[] = [

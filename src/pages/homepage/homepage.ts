@@ -46,9 +46,9 @@ export class HomePage{
       data => {
         // Set the data to display in the template
 
-          this.p1 = Math.round(data['RealP1'] * 100) / 100;
-          this.p2 = Math.round(data['RealP2'] * 100) / 100;
-          this.p3 = Math.round(data['RealP3'] * 100) / 100;
+          this.p1 = Math.round(data['RealP1'] * 100.0) / 100;
+          this.p2 = Math.round(data['RealP2'] * 100.0) / 100;
+          this.p3 = Math.round(data['RealP3'] * 100.0) / 100;
           //this.p1 == JSON.stringify(this.p1);
           //this.p2 == JSON.stringify(this.p2);
           //this.p3 == JSON.stringify(this.p3);
