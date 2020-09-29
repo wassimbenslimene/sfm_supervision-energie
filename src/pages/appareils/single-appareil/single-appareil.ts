@@ -35,6 +35,7 @@ export class SingleAppareilPage implements OnInit {
         this.dat = data['Cout'][this.x];
         this.cons = data['Consommation'][this.x];
 
+
         this.dat == JSON.stringify(this.dat);
         this.cons == JSON.stringify(this.cons);
         console.log(this.dat)

@@ -14,10 +14,10 @@ export class AppareilsService {
   getRemotedata(){
     return this.http.get("http://localhost:8003?devices=true")
   }
-
+  savedenergy:any=0;
   appareilsList: Appareil[] = [
     {
-      name: 'Machine à laver',
+      name: 'appliance_0',
       description: [
         'Volume: 6 litres',
         'Temps de lavage: 2 heures'
@@ -26,7 +26,7 @@ export class AppareilsService {
       image:'assets/imgs/machinealaver.jpg'
     },
     {
-      name: 'Télévision',
+      name: 'appliance_1',
       description: [
         'Dimensions: 40 pouces'
       ],
@@ -34,7 +34,7 @@ export class AppareilsService {
       image:'assets/imgs/tel.jpg'
     },
     {
-      name: 'climatiseur',
+      name: 'appliance_2',
       description: [
         'Marque: fait maison'
       ],
@@ -42,7 +42,7 @@ export class AppareilsService {
       image:'assets/imgs/climatisseur.jpg'
     },
     {
-      name: 'Réfrigérateur',
+      name: 'appliance_3',
       description: [
         'Marque: fait maison'
       ],
